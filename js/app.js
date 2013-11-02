@@ -3,12 +3,18 @@ jQuery( document ).ready(function( $ ) {
   // Code that uses jQuery's $ can follow here.
 });
 
-chrome.extension.onMessage.addListener(
-  	function(request, sender, sendResponse) {	
-  		if(request.openPlugin == 'open'){
-  			
-  		}else if(request.openPlugin == 'close'){
+// chrome.extension.onMessage.addListener(
+//   	function(request, sender, sendResponse) {	
+//   		if(request.openPlugin == 'open'){
 
-  		}
- 	}
- );
+//   		}else if(request.openPlugin == 'close'){
+
+//   		}
+//  	}
+//  );
+alert('kkkkkkkk');
+var openWebVisor = function(){
+	alert('lkk');	
+}
+
+window.openWebVisor = openWebVisor;
