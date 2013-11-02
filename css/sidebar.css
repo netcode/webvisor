@@ -280,7 +280,7 @@ right: -25px;
 	padding-top: 6px;
     font-weight: 300;
     margin-bottom: 0;
-    padding: 0 0 5px 5px;
+    padding: 10px 0 5px 5px;
 	width: 280px;
 	text-align: left;
 }
@@ -447,5 +447,33 @@ top: -30px;
     -o-border-radius: 30px;
     border-radius: 30px;
 }
-
+.btn {
+display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: normal;
+line-height: 1.428571429;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+cursor: pointer;
+background-image: none;
+border: 1px solid transparent;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+border:none;
+}
+.btn-primary {
+color: rgb(255, 255, 255);
+background-color: #f36c3d;
+padding: 10px 42px;
+margin: 0px 0px 25px 0px;
+}
+.btn-primary:hover{
+	background: rgb(238, 147, 116);
+}
 
