@@ -23,6 +23,12 @@ var showSidebar = {
 		html += this.get_posts();
 		html += this.get_posts();
 		html += this.get_posts();
+		html += this.get_posts();
+		html += this.get_posts();
+		html += this.get_posts();
+		html += this.get_posts();
+		html += this.get_posts();
+		html += this.get_posts();
 		
 		html +='</div>'; /* /:posts*/
 		html +='</div>'; /* /:content*/
@@ -31,6 +37,7 @@ var showSidebar = {
 		
 		jQuery( document ).ready(function( $ ) {
 			$('body').prepend(html);
+			$('.WebvisorApp .posts').css('height', $(document).height());
 		});
 	},
 	'get_posts':function() {
@@ -59,6 +66,8 @@ var showSidebar = {
 	    html += '</div>';
 	    html += '</div>';
 	    html += '</div>';
+	    
+	    
 	    
 	    return html;
 	}
