@@ -1,9 +1,18 @@
-var draw = function (){
-	'sdpod':function(){
-		var _this = this;
-		_this.meh
+var draw = {
+	'show':function(){
+
 	},
-	meh:'l'
+	'create':function(){
+		//create new board
+		alert('koko');
+		
+	},
+	'init':function(){
+		var _this = this;
+		
+	}
+
 }
 
-draw.sdpod()
+//unit testing
+draw.create();

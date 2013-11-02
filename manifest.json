@@ -19,7 +19,7 @@
   "content_scripts": [
     {
       "matches": ["https://*/*","http://*/*"],      
-      "js": ["js/libs/jquery-1.10.2.min.js", "js/libs/bootstrap.min.js","js/login.js","js/sidebar.js","js/draw.js","js/app.js"],
+      "js": ["js/libs/jquery-1.10.2.min.js", "js/libs/bootstrap.min.js","js/libs/sketch.min.js","js/login.js","js/sidebar.js","js/draw.js","js/app.js"],
       "css":["css/bootstrap.min.css","css/draw.css","css/sidebar.css"]
     }
   ],
