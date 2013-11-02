@@ -17,7 +17,12 @@
 	line-height: 1.6;
 	font-size: 16px;
 	font-family: futura-pt,"Helvetica Neue",Helvetica,sans-serif;
+	z-index: 999999999;
 	
+}
+
+.WebvisorApp .content{
+	padding: 0 5px;
 }
 .WebvisorApp a {
 	color: #3d4950;
