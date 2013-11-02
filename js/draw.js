@@ -1,25 +1,36 @@
-var draw = {
-	'show':function(){
+var draw;
+jQuery( document ).ready(function( $ ) {
+  draw = {
+		'show':function(){
 
-	},
-	'create':function(){
-		//create new board
-		console.log('koko');
-		var h = $(document).height();
-		var w = $(document).width();
-		var div = $('<div />',{
-			id:'webvisor-drawing-board',
-			style:'width:'+w+'px;height:'+h+'px'
-		});
-		$('body').append(div);
-		
-	},
-	'init':function(){
-		var _this = this;
-		
+		},
+		'create':function(){
+			//create new board
+			//console.log('koko');
+			var h = $(document).height();
+			var w = $(document).width();
+			
+			div = '<canvas width="'+w+'" height="'+h+'" id="webvisor-drawing-board"></canvas>';
+			$('body')			
+			.append(div);
+			$('#webvisor-drawing-board')
+				.css({
+						'position':'fixed',
+						'z-index':9999
+					})
+				.sketch();
+			
+		},
+		'init':function(){
+			var _this = this;
+			
+		}
+
 	}
 
-}
+	//unit testing
+	draw.create();
 
-//unit testing
-draw.create();
+});
+
+
