@@ -4,7 +4,14 @@ var draw = {
 	},
 	'create':function(){
 		//create new board
-		alert('koko');
+		console.log('koko');
+		var h = $(document).height();
+		var w = $(document).width();
+		var div = $('<div />',{
+			id:'webvisor-drawing-board',
+			style:'width:'+w+'px;height:'+h+'px'
+		});
+		$('body').append(div);
 		
 	},
 	'init':function(){
