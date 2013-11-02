@@ -16,7 +16,7 @@ var login = {
 		window.open(
 			start_url, 
 			"google+", 
-			"location=0,status=0,scrollbars=0,width=800,height=500"
+			"location=0,status=0,scrollbars=0,width=400,height=300"
 		); 
 
 		var m = setInterval(function() {
