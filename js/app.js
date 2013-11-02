@@ -12,7 +12,6 @@ jQuery( document ).ready(function( $ ) {
 //   		}
 //  	}
 //  );
-alert('kkkkkkkk');
 var openWebVisor = function(){
 	alert('lkk');	
 }
