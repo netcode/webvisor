@@ -447,7 +447,7 @@ top: -30px;
     -o-border-radius: 30px;
     border-radius: 30px;
 }
-.btn {
+.WebvisorApp .btn {
 display: inline-block;
 padding: 6px 12px;
 margin-bottom: 0;
@@ -467,13 +467,13 @@ border: 1px solid transparent;
 user-select: none;
 border:none;
 }
-.btn-primary {
+.WebvisorApp .btn-primary , .WebvisorApp .btn-primary.active {
 color: rgb(255, 255, 255);
 background-color: #f36c3d;
 padding: 10px 42px;
 margin: 0px 0px 25px 0px;
 }
-.btn-primary:hover{
+.WebvisorApp .btn-primary:hover{
 	background: rgb(238, 147, 116);
 }
 
