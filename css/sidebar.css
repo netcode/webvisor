@@ -1,0 +1,15 @@
+.wa {
+	width: 300px;
+	height: 100%;
+	position: fixed;
+	background: #000;
+	right:0px;
+	color:#fff;
+}
+
+header {
+	background: #f36c3d;
+	height: 60px;
+	color: #fff;
+}
+

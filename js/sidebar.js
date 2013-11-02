@@ -1,11 +1,21 @@
-/*
-var draw = function (){
-	'sdpod':function(){
-		var _this = this;
-		_this.meh
-	},
-	meh:'l'
+var showSidebar = {
+	'show':function(){
+		
+		var html ='';
+		/*header*/
+		html += '<header>';
+		html += '<div class="title">';
+		html += '<a href="/" class="logo"><img src="/img/sidebar-logo.png"></a>';
+		html += '<h1 class="name"><a href="/">Webvisor</a></h1>';
+		html += '<h2 class="tagline">share info with people around world.</h2>';
+		html += '</div>';
+		html += '</header>';
+		
+		
+		jQuery( document ).ready(function( $ ) {
+			$('body').prepend(html);
+		});
+	}
 }
 
-draw.sdpod()
-*/
+showSidebar.show(); 
