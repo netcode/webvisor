@@ -59,7 +59,7 @@ jQuery( document ).ready(function( $ ) {
 						$('#'+'x'+n).popover({
 							content:v.text,
 						});
-						
+
 					});
 
 
@@ -89,7 +89,7 @@ jQuery( document ).ready(function( $ ) {
 
 			$('#webvisor-drawing-board')
 				.css({
-						'position':'fixed',
+						'position':'absolute',
 						'z-index':9999,
 						'top':0,
 						'left':0
@@ -101,13 +101,13 @@ jQuery( document ).ready(function( $ ) {
 			var w = $(document).width();
 			
 			var div = '<canvas width="'+w+'" height="'+h+'" id="webvisor-drawing-board"></canvas>';
-			var tools = '<div class="webvisor-drawing-tools"><a href="#webvisor-drawing-board" data-download="png" style="float: right; width: 100px;">Download</a></div>';
+			var tools = '<div class="webvisor-drawing-tools"></div>';
 			$('body')	
 			.append(tools)		
 			.append(div);
 
 			$.each(['#f00', '#ff0', '#0f0', '#0ff', '#00f', '#f0f', '#000', '#fff'], function() {
-		      $('.webvisor-drawing-tools').append("<a href='#webvisor-drawing-board' data-color='" + this + "' style='width: 10px; background: " + this + ";'></a> ");
+		      $('.webvisor-drawing-tools').append("<a href='#webvisor-drawing-board' class='btn btn-default' data-color='" + this + "' style='width: 10px; background: " + this + ";'></a> ");
 		    });
 		    $.each([3, 5, 10, 15], function() {
 		      $('.webvisor-drawing-tools').append("<a href='#webvisor-drawing-board' data-size='" + this + "' style='background: #ccc'>" + this + "</a> ");
@@ -127,7 +127,7 @@ jQuery( document ).ready(function( $ ) {
 		    	}
 		    	
 		    });
-		    $('.webvisor-drawing-tools').append(anchor).append(txtAnchor);
+		    $('.webvisor-drawing-tools').append(txtAnchor);
 		    $('.webvisor-drawing-tools')
 		    	.css({
 		    		'position':'fixed',
@@ -135,14 +135,13 @@ jQuery( document ).ready(function( $ ) {
 		    		'top':0,
 		    		'left':0,
 		    		'width':'100%',
-		    		'height':'30px'
-		    	})
+		    	});
 			$('#webvisor-drawing-board')
 				.css({
-						'position':'fixed',
+						'position':'absolute',
 						'z-index':9999,
 						'top':0,
-						'left':0
+						'left':0,
 					})
 				.sketch();
 
@@ -248,7 +247,9 @@ jQuery( document ).ready(function( $ ) {
 	}
 
 	//unit testing
-	draw.show(1);
+	//draw.show(1);
+
+	//draw.create();
 
 });
 
