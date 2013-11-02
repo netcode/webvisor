@@ -13,8 +13,3 @@ var opened = 0;
 //   		}
 //  	}
 //  );
-var openWebVisor = function(){
-	alert('lkk');	
-}
-
-window.openWebVisor = openWebVisor;
