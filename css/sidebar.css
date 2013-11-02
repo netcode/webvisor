@@ -1,8 +1,23 @@
+*{
+	color: #3d4950;
+line-height: 1.6;
+font-size: 16px;
+font-family: futura-pt,"Helvetica Neue",Helvetica,sans-serif;
+}
+	
+a {
+	color: #3d4950;
+}
+
+a:hover {
+	color: #f36c3d;
+}
+
 .wa {
 	width: 300px;
 	height: 100%;
 	position: fixed;
-	background: #000;
+	background: #fff;
 	right:0px;
 	color:#fff;
 }
@@ -11,5 +26,12 @@ header {
 	background: #f36c3d;
 	height: 60px;
 	color: #fff;
+	position: fixed;
+}
+header a {color:#fff;}
+header .title .tagline {
+line-height: 75px;
+float: left;
+color: rgba(255,255,255,.6);
 }
 
