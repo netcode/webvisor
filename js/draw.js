@@ -101,6 +101,7 @@ jQuery( document ).ready(function( $ ) {
 		},
 		'drawCanvas':function(){
 			var _this = this;
+			_this.clear();
 			var h = $(document).height();
 			var w = $(document).width();
 			
