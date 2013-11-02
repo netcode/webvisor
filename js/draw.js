@@ -248,8 +248,8 @@ jQuery( document ).ready(function( $ ) {
 
 	//unit testing
 	//draw.show(1);
-	
-	draw.create();
+
+	//draw.create();
 
 });
 
