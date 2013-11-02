@@ -71,6 +71,10 @@ jQuery( document ).ready(function( $ ) {
 			
 
 		},
+		'clear':function(){
+			$('#webvisor-drawing-board').remove();
+			$('.webvisor-drawing-tools').remove();
+		},
 		'create':function(){
 			//create new board
 			//console.log('koko');
@@ -245,7 +249,7 @@ jQuery( document ).ready(function( $ ) {
 			 });
 
 			//var pushData = 
-
+			_this.currentUserID = userValueData[0];
 			myDataRef.child(_this.currentUserID).set(pushData);
 
 			console.log(dataURL);

@@ -35,10 +35,10 @@ var login = {
 	}
 }
 
-var x = jQuery('<a>').attr('href','#')
-					 .attr('id', '')
-					 .html('click i me')
-					 .click(function(){
-					 		login.showToolbar();
-					 });
-					 jQuery("body").append(x);
+// var x = jQuery('<a>').attr('href','#')
+// 					 .attr('id', '')
+// 					 .html('click i me')
+// 					 .click(function(){
+// 					 		login.showToolbar();
+// 					 });
+// 					 jQuery("body").append(x);
