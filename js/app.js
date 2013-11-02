@@ -2,3 +2,13 @@ $.noConflict();
 jQuery( document ).ready(function( $ ) {
   // Code that uses jQuery's $ can follow here.
 });
+
+chrome.extension.onMessage.addListener(
+  	function(request, sender, sendResponse) {	
+  		if(request.openPlugin == 'open'){
+  			
+  		}else if(request.openPlugin == 'close'){
+
+  		}
+ 	}
+ );
