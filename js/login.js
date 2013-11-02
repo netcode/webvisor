@@ -1,37 +1,44 @@
 var login = {
 	isLoaded:false,
-	isLoggedin:false,
+	isLoggedin:false,	
 
 	init: function(){
-		console.log("ddd");
 		this.isLoaded = true;
-		hello.init({ 
-			google   : "921216105001.apps.googleusercontent.com"
-		});
-
-		hello.on('auth.login', function(auth){
-			// call user information, for the given network
-			hello( auth.network ).api( '/me' ).success(function(r){
-				var $target = $("#profile_"+ auth.network );
-				if($target.length==0){
-					$target = $("<div id='profile_"+auth.network+"'></div>").appendTo("#profile");
-				}
-				$target.html('<img src="'+ r.thumbnail +'" /> Hey '+r.name).attr('title', r.name + " on "+ auth.network);
-			});
-		});
+		var input = jQuery('<input>').attr('type','hidden')
+ 						  .attr('id', 'WVOauthInput')
+ 						  .val("0");
+		jQuery("body").append(input);
 	},
 
 	process: function(){
-		console.log("sss");
-		this.isLoggedin = true;
-		hello( 'google' ).login();
+		var _this = this;
+		start_url = "http://bered.org/hybridauth-2.1.2/examples/widget_authentication/widget/?provider=google" + "&_ts=" + (new Date()).getTime();
+		window.open(
+			start_url, 
+			"google+", 
+			"location=0,status=0,scrollbars=0,width=800,height=500"
+		); 
+
+		var m = setInterval(function() {
+		    if (jQuery("#WVOauthInput").val() != "0") {
+		        clearInterval(m);
+		        _this.isLoggedin = true;
+		        draw.create();
+		    }
+		}, 500);
 	},
 
-	getUser: function(){
-		console.log("jiji");
+	showToolbar: function(){
 		if(!this.isLoaded) this.init();
-		if(!this.isLoggedin) this.process();	
+		if(!this.isLoggedin) this.process();
+		else draw.create();
 	}
 }
 
-//login.getUser();
+var x = jQuery('<a>').attr('href','#')
+					 .attr('id', '')
+					 .html('click i me')
+					 .click(function(){
+					 		login.showToolbar();
+					 });
+					 jQuery("body").append(x);
