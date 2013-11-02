@@ -37,8 +37,9 @@ var showSidebar = {
 		
 		var website = window.btoa(window.location.host)
 		var myDataRef = new Firebase('https://webvisor.firebaseio.com/'+website);
-		jQuery('.posts').html('');
+		
 		myDataRef.on('value', function(snapshot) {
+			jQuery('.posts').html('');
 			//console.log(snapshot.val());
 			var users = snapshot.val();
 			for(i in users){
@@ -60,7 +61,7 @@ var showSidebar = {
 
 
 			}
-			jQuery('.posts').append(html);
+			jQuery('.posts').html(html);
 				jQuery('.post-NaN').on('click',function(){
 			    	draw.clear();
 			    	draw.show(jQuery(this).attr('id'));

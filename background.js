@@ -28,4 +28,4 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
 });
 
-chrome.browserAction.setBadgeText({text: "10+"});
+//chrome.browserAction.setBadgeText({text: "1"});

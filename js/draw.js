@@ -74,6 +74,7 @@ jQuery( document ).ready(function( $ ) {
 		'clear':function(){
 			$('#webvisor-drawing-board').remove();
 			$('.webvisor-drawing-tools').remove();
+			$('.webvisor-text-overlay').remove();
 		},
 		'create':function(){
 			//create new board
