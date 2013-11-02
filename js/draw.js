@@ -127,7 +127,10 @@ jQuery( document ).ready(function( $ ) {
 		    	}
 		    	
 		    });
-		    $('.webvisor-drawing-tools').append(txtAnchor);
+		    var SaveAnchor = $('<a />',{href:'#',class:'btn btn-default'}).html('Save').on('click',function(){
+		    	_this.export();
+		    });
+		    $('.webvisor-drawing-tools').append(SaveAnchor).append(txtAnchor);
 		    $('.webvisor-drawing-tools')
 		    	.css({
 		    		'position':'fixed',
@@ -219,9 +222,16 @@ jQuery( document ).ready(function( $ ) {
 
 			var canvas = document.getElementById('webvisor-drawing-board');
 			var dataURL = canvas.toDataURL();
+			var userValue = $('#WVOauthInput').val();
+			var userValueData = userValue.split('|');
 			var pushData = {
 				'img':dataURL,
-				'texts':[]
+				'texts':[],
+				'user':{
+					'name':userValueData[1],
+					'img':userValueData[2],
+					'id':userValueData[0]
+				}
 			}
 			//get text markers
 			$('.webvisor-text-overlay').each(function(){
